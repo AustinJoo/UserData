@@ -27,9 +27,11 @@ class UserDataComp extends React.Component{
         return(
             <div>
                 <div>
-                    <h1 id='AppName'> Wait for Weight Loss! </h1>
-                    <h2>Username: {this.state.username} - ID: {this.state.ID}</h2>
-                    <h2>Member since: {this.state.CurrentDate}</h2>
+                    <div id='Banner'>
+                        <h1 id='AppName'> Wait for Weight Loss! </h1>
+                        <h2>Username: {this.state.username} - ID: {this.state.ID}</h2>
+                        <h2>Member since: {this.state.CurrentDate}</h2>
+                    </div>
                     {/* <Grapher/> */}
                     <InputZone />
                 </div>
