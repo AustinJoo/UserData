@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 
-class userDataCompuser extends React.Component{
+class UserDataComp extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -23,4 +23,4 @@ class userDataCompuser extends React.Component{
     }
 }
 
-ReactDOM.render(<userDataComp />, document.getElementById('UserData'))
+ReactDOM.render(<UserDataComp />, document.getElementById('UserData'))
