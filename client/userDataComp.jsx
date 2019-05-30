@@ -1,24 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Axios from 'axios';
+import axios from 'axios';
+import Grapher from './components/grapher.jsx';
+import InputZone from './components/inputZone.jsx';
 
 class UserDataComp extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-
+            user: undefined,
+            username: 'Demo User',
+            ID: 'Demo ID',
+            GraphData: undefined
         }
     }
 
-    ComponentDidMount(){
-
+    componentDidMount(){
+        axios.get('/test')
+        .then((data) => {
+            console.log(data)
+            this.setState({Notes: data.data})
+        })
     };
 
     render(){
         return(
-            <h1>
-                hello world!
-            </h1>
+            <div>
+                <div>
+                    <h1 id='AppName'> Wait for Weight Loss! </h1>
+                    <h2>Username: {this.state.username} - ID: {this.state.ID}</h2>
+                    <h2>Member since: {this.state.CurrentDate}</h2>
+                    {/* <Grapher/> */}
+                    <InputZone />
+                </div>
+            </div>
         )
     }
 }
