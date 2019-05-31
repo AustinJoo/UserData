@@ -12,6 +12,12 @@ server.get('/test', (req, res) => {
     res.send('testing data')
 })
 
+server.post('/addToTail', (req,res) => {
+    req = req.body.newNode;
+    console.log(req);
+    res.send('Req received! Adding to LinkedList Now')
+})
+
 server.listen(port, () => {
     console.log('Listening on port ' + port);
 })
